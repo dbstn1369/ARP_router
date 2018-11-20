@@ -1,0 +1,265 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// ÇÑ±¹¾î(´ëÇÑ¹Î±¹) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\ARP.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.kor\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ARP.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 109
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ARP Á¤º¸"
+FONT 9, "±¼¸²", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,16,22,20,20
+    LTEXT           "Address Resolution Protocol",IDC_STATIC,41,26,119,8,SS_NOPREFIX
+    DEFPUSHBUTTON   "È®ÀÎ",IDOK,178,7,50,14,WS_GROUP
+    LTEXT           "Copyright (C) 2016",IDC_STATIC,42,58,119,8
+END
+
+IDD_ARP_DIALOG DIALOGEX 0, 0, 501, 279
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "5Á¶"
+FONT 9, "¸¼Àº °íµñ", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST_CACHE_TABLE,12,136,228,68,LBS_NOINTEGRALHEIGHT | LBS_DISABLENOSCROLL | WS_TABSTOP
+    PUSHBUTTON      "DELETE",IDC_BUTTON_CACHE_DELETE,74,210,50,14
+    PUSHBUTTON      "DELETE ALL",IDC_BUTTON_CACHE_ALL_DELETE,133,210,50,14
+    CONTROL         "IPAddress1",IDC_IPADDRESS_IP_ADDR,"SysIPAddress32",WS_TABSTOP,11,244,165,14
+    PUSHBUTTON      "SEND",IDC_BUTTON_IP_SEND,185,244,50,14
+    GROUPBOX        "ARP INFORMATION",IDC_STATIC,7,13,243,108
+    CONTROL         "IPAddress1",IDC_IPADDRESS_SRC_IP_ADDR,"SysIPAddress32",WS_TABSTOP,14,101,170,14
+    COMBOBOX        IDC_COMBO_ND,14,34,171,104,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "SOURCE IP ADDRESS",IDC_STATIC,14,87,75,8
+    LTEXT           "NETWORK DEVICE",IDC_STATIC,14,22,65,8
+    LTEXT           "ETHERNET ADDRESS",IDC_STATIC,14,54,73,8
+    EDITTEXT        IDC_EDIT_SRC_ETHER_ADDR,14,66,170,14,ES_CENTER | ES_AUTOHSCROLL
+    GROUPBOX        "GRATUITOUS ARP",IDC_STATIC,258,179,229,37
+    EDITTEXT        IDC_EDIT_DST_ETHER_ADDR,263,198,166,14,ES_CENTER | ES_AUTOHSCROLL
+    PUSHBUTTON      "SEND",IDC_BUTTON_ETHER_SEND,432,198,50,14
+    GROUPBOX        "PROXY TABLE",IDC_STATIC,258,14,239,162
+    LISTBOX         IDC_LIST_PROXY_TABLE,263,27,230,125,LBS_NOINTEGRALHEIGHT | LBS_DISABLENOSCROLL | WS_TABSTOP
+    PUSHBUTTON      "DELETE",IDC_BUTTON_PROXY_DELETE,322,158,50,14
+    PUSHBUTTON      "ADD",IDC_BUTTON_PROXY_ADD,263,158,50,14
+    LTEXT           "ETHERNET ADDRESS",IDC_STATIC,264,189,73,8
+    PUSHBUTTON      "DELETE ALL",IDC_BUTTON_PROXY_ALL_DELETE,381,158,50,14
+    PUSHBUTTON      "ADD",IDC_BUTTON_CACHE_ADD,14,210,50,14
+    PUSHBUTTON      "SET",IDC_BUTTON_SET,192,101,50,14
+    CONTROL         "IPAddress1",IDC_IPADDRESS_DST_IP_ADDR,"SysIPAddress32",NOT WS_VISIBLE | WS_TABSTOP,261,224,169,14
+    GROUPBOX        "CACHE TABLE",IDC_STATIC,7,124,242,102
+    GROUPBOX        "DESTINATION IP ADDRESS",IDC_STATIC,7,234,234,34
+END
+
+IDD_CACHE_ADD_DIALOG DIALOGEX 0, 0, 205, 84
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CACHE ENTRY ADD"
+FONT 9, "¸¼Àº °íµñ", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,39,60,50,14
+    PUSHBUTTON      "CANCEL",IDCANCEL,119,60,50,14
+    LTEXT           "IP ADDRESS",IDC_STATIC,15,17,62,10
+    LTEXT           "ETHERNET ADDRESS",IDC_STATIC,15,42,67,9
+    EDITTEXT        IDC_EDIT_ETHER_ADDR,84,39,107,14,ES_CENTER | ES_AUTOHSCROLL
+    CONTROL         "IPAddress1",IDC_IPADDRESS_IP_ADDR,"SysIPAddress32",WS_TABSTOP,84,13,106,14
+END
+
+IDD_PROXY_ADD_DIALOG DIALOGEX 0, 0, 209, 113
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "PROXY ARP ENTRY ADD"
+FONT 9, "¸¼Àº °íµñ", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,41,87,50,14
+    PUSHBUTTON      "CANCEL",IDCANCEL,119,87,50,14
+    LTEXT           "DEVICE",IDC_STATIC,14,17,46,11
+    LTEXT           "IP ADDRESS",IDC_STATIC,14,42,62,10
+    LTEXT           "ETHERNET ADDRESS",IDC_STATIC,14,68,67,9
+    EDITTEXT        IDC_EDIT_ETHER_ADDR,84,63,107,14,ES_CENTER | ES_AUTOHSCROLL
+    CONTROL         "IPAddress1",IDC_IPADDRESS_IP_ADDR,"SysIPAddress32",WS_TABSTOP,84,38,106,14
+    COMBOBOX        IDC_COMBO_DEVICE,84,17,105,60,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041204B0"
+        BEGIN
+            VALUE "FileDescription", "ARP MFC ÀÀ¿ë ÇÁ·Î±×·¥"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "ARP"
+            VALUE "LegalCopyright", "Copyright (C) 2012"
+            VALUE "OriginalFilename", "ARP.EXE"
+            VALUE "ProductName", "ARP ÀÀ¿ë ÇÁ·Î±×·¥"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 102
+    END
+
+    IDD_ARP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 497
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 275
+    END
+
+    IDD_CACHE_ADD_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 198
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 77
+    END
+
+    IDD_PROXY_ADD_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 202
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 106
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "ARP Á¤º¸(&A)..."
+END
+
+#endif    // ÇÑ±¹¾î(´ëÇÑ¹Î±¹) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE 18, 1
+#pragma code_page(949)
+#endif //_WIN32
+#include "res\ARP.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.kor\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
